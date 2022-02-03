@@ -61,4 +61,7 @@ python final_submission.py
 cleaner(".../MIND_dataset/result.txt",".../MINDlarge_test/behaviors.tsv","..../MIND_dataset/prediction.txt")
 ```
 
+Reference:
+[BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer]
+https://github.com/FeiSun/BERT4Rec
 
