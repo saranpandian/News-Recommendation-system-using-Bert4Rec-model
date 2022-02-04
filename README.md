@@ -41,6 +41,7 @@ Encoder Representations from Transformer] https://arxiv.org/pdf/1904.06690.pdf
 
 ## Implementation:
 Taking the news titles in history which are arranged in chronological order we mask some news IDs in random from sequence. we train the Bert4Rec model which tries to identify the represenatation of the masked sequence.
+(change paths to access dataset)
 we run the following code
 
 python pretrain_Bert4Rec_Model.py
