@@ -182,25 +182,6 @@ class MINDDataset_val():
     def __len__(self):
         return len(self.test_dataset)
 
-class MINDDataset_val():
-
-    def __init__(self,w2v_vectors,test_dataset,transform=None):
-        self.w2v_vectors = w2v_vectors
-        self.test_dataset = test_dataset
-
-    def __getitem__(self,index):
-        data = list(self.test_dataset.iloc[index])
-        #print(history.shape)
-        history = [zero_pad_post(self.w2v_vectors[p],50) for p in data[2]]
-        history = zero_pad_pre(history,50)
-
-        candidate_list1 = np.array([zero_pad_post(self.w2v_vectors[k],50) for k in data[3]])
-        ground_truth = np.array([int(x) for x in data[4]])
-        return history,candidate_list1,ground_truth
-
-    def __len__(self):
-        return len(self.test_dataset)
-
 
 print("creating title embeddings for train")
 title_embeddings = embeddings().find_embeddings()
